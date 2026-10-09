@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "competitor-comparison"
+version = "0.1.0"
+description = "竞品方案对比分析助手：语义匹配 + RAG 检索 + 结构化生成，把企业 IT 采购方案对比从 4 小时压缩到 15 分钟"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "tianliuyun" }]
+keywords = ["rag", "biencoder", "retrieval", "structured-generation", "sales", "competitor-analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
